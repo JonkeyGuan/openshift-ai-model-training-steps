@@ -127,59 +127,71 @@ change **Environment Variables** of each **NODE PROPERTIES** then save
 
 ![image-20251101214804181](assets/image-20251101214804181.png)
 
-- run pipeline
+run pipeline
 
-  ![image-20251101215315360](assets/image-20251101215315360.png)
+![image-20251101215315360](assets/image-20251101215315360.png)
 
-  if you meet below that means the pipeline server is configured after the workbench, you can stop the running workbench, make a minor edit (e.g., add/delete a dummy environment variable), save the changes, and then restart the workbench.
+if you meet below that means the pipeline server is configured after the workbench, you can stop the running workbench, make a minor edit (e.g., add/delete a dummy environment variable), save the changes, and then restart the workbench.
 
-  ![image-20251101222409215](assets/image-20251101222409215.png)
+![image-20251101222409215](assets/image-20251101222409215.png)
 
-  the normal step will be 
+the normal step will be 
 
-  ![image-20251101222546454](assets/image-20251101222546454.png)
+![image-20251101222546454](assets/image-20251101222546454.png)
 
-  adjust pipeline parameters and click ok
+adjust pipeline parameters and click ok
 
-  ![image-20251101222653859](assets/image-20251101222653859.png)
+![image-20251101222653859](assets/image-20251101222653859.png)
 
-  ![image-20251101222735978](assets/image-20251101222735978.png)
+![image-20251101222735978](assets/image-20251101222735978.png)
 
-  if faced below ssl error, you can modify pipeline runtime cloud object storage endpoint manually 
+if faced below ssl error, you can modify pipeline runtime cloud object storage endpoint manually 
 
-  ![image-20251101223453218](assets/image-20251101223453218.png)
+![image-20251101223453218](assets/image-20251101223453218.png)
 
-  change `https` to `http` or change to actual https://minio.your-domain with public certs will be more better.
+change `https` to `http` or change to actual https://minio.your-domain with public certs will be more better.
 
-  ![image-20251101223704472](assets/image-20251101223704472.png)
+![image-20251101223704472](assets/image-20251101223704472.png)
 
-  run pipeline again
+run pipeline again
 
-  ![image-20251101223849744](assets/image-20251101223849744.png)
+![image-20251101223849744](assets/image-20251101223849744.png)
 
-  view **Run Details**
+view **Run Details**
 
-  ![image-20251101224207236](assets/image-20251101224207236.png)
+![image-20251101224207236](assets/image-20251101224207236.png)
 
-  Finished pipeline run
+Finished pipeline run
 
-  ![image-20251101231804905](assets/image-20251101231804905.png)
+![image-20251101231804905](assets/image-20251101231804905.png)
 
-  registered new tuned model 
+registered new tuned model 
 
-  ![image-20251101231845198](assets/image-20251101231845198.png)
+![image-20251101231845198](assets/image-20251101231845198.png)
 
-  new model is running
+new model is running
 
-  ![image-20251101232039422](assets/image-20251101232039422.png)
+![image-20251101232039422](assets/image-20251101232039422.png)
 
-  underlying pod workload of the model
+underlying pod workload of the model
 
-  ![image-20251101232005087](assets/image-20251101232005087.png)
+![image-20251101232005087](assets/image-20251101232005087.png)
 
-  get model id and verify its status 
+get model id and verify its status 
 
-  ![image-20251101232347664](assets/image-20251101232347664.png)
+![image-20251101232347664](assets/image-20251101232347664.png)
+
+- visusalize trainng with tensorboard
+
+  > if tensor board is not setup yet
+  >
+  > ```
+  > oc -n <your data science project namespace> apply -f https://raw.githubusercontent.com/JonkeyGuan/openshift-ai-model-training-infra/refs/heads/main/tensorboard/tensorboard.yaml
+  > ```
+
+  access tensorboard web url e.g. `https://tensorboard-ai-ops.apps.<cluster-name>.<your-domain>`
+
+  ![image-20251102111938396](assets/image-20251102111938396.png)
 
   
 
