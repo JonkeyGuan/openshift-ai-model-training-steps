@@ -181,7 +181,7 @@ get model id and verify its status
 
 ![image-20251101232347664](assets/image-20251101232347664.png)
 
-- visusalize trainng with tensorboard
+- visusalize training with tensorboard
 
   > if tensor board is not setup yet
   >
@@ -189,7 +189,7 @@ get model id and verify its status
   > oc -n <your data science project namespace> apply -f https://raw.githubusercontent.com/JonkeyGuan/openshift-ai-model-training-infra/refs/heads/main/tensorboard/tensorboard.yaml
   > ```
 
-  access tensorboard web url e.g. `https://tensorboard-ai-ops.apps.<cluster-name>.<your-domain>`
+  access tensorboard web url e.g. `https://tensorboard-ai-ops.apps.<cluster-name>.<your-domain>``
 
   ![image-20251102111938396](assets/image-20251102111938396.png)
 
